@@ -1,0 +1,4 @@
+All books were moved to subpages of Wikipedia:Books/archive at the end of June where they remained for a month to allow users to keep books in userspace and allow for refunds after namespace deletion.
+On 3 August 2021, all books were deleted
+For details of how to restore a book after deletion, see: Wikipedia:Books/archive
+Each book has its own Wikipedia page, which contains a Contents list of the articles included in it together with formatting metadata such as Chapter headings. You can create a book as a sub-page in your own user space, or as a community book in the Book: namespace. The Book Creator tool automates much of the book design work, although experienced editors can still code up the book design by hand.
