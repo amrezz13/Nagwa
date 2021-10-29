@@ -4,10 +4,13 @@ from flask import render_template, url_for, request
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 @app.route("/home")
 @app.route("/ekhtebar")
 def scrapper():
-    return render_template('index.html')
+    if request.method == 'GET':
+        return render_template('index.html')
+    else:
+        return 'not now'
 
 
