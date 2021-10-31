@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <h4>Novels</h4>
+  <hr class="my-4"/>
+  <table id="novel-table" class="display table responsvive text-left mt-4" style="width: 100%">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Link</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in df.index %}
+        <tr>
+          <td>{{(df.index[row])+1}}</td>
+          <td>{{df['name'][row]}}</td>
+          <td>{{df['author'][row]}}</td>
+          <td><a href={{df['link'][row]}}>{{df['name'][row]}}</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <h4>File saved in {{directory}} </h4>
+  <hr class="my-4"/>
+  <a href="/download" class="btn btn-primary">Download</a>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $('#novel-table').DataTable();
+    });
+  </script>
+{% endblock %}

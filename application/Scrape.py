@@ -2,8 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 
-url = 'https://www.marefa.org/%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%A3%D9%81%D8%B6%D9%84_%D8%A7%D9%84%D9%83%D8%AA%D8%A8_' \
-      '%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9 '
+
 
 '''
     function to scrape table returning data frame
@@ -33,4 +32,5 @@ def scrapper(url):
                     link = a['href']
                     links.append('https://www.marefa.org'+link)
     df['link'] = links
+
     return df
